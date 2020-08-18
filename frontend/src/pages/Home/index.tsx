@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FiLogIn } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
+import api from '../../services/api';
 
 import './styles.css';
 
 import logo from '../../assets/logo.svg';
 
 const Home = () => {
+    
+    useEffect(() => {
+        api.get('items')
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err => console.log(err))
+    }, [])
+
     return (
         <div id="page-home">
             <div className="content">
