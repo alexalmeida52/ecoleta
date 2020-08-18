@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
     "knex:seed": "knex --knexfile knexfile.ts seed:run",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alex Alves",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
