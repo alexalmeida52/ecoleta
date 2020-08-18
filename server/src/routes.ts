@@ -10,7 +10,7 @@ const itemsController = new ItemsController();
 
 /**
  * ROTAS DOS POINTS
- * 
+ * Rotas
  */
 
 // Criar Point
