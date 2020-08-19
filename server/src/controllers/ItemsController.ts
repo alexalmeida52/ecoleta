@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import knex from '../database/connection';
+const url = process.env.NODE_ENV == 'production' ? 'https://ecoleta-servidor.herokuapp.com/uploads' : 'http://localhost:3333/uploads';
 
 class ItemsController {
     async index(req: Request, res: Response) {
@@ -9,7 +10,7 @@ class ItemsController {
             return {   
                 id: item.id,
                 title: item.title, 
-                image_url: `http://localhost:3333/uploads/${item.image}`
+                image_url: `${url}/${item.image}`
             }
         });
 
